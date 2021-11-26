@@ -77,8 +77,9 @@ class _BusHomeState extends State<BusHome> {
                   color: Colors.blue, borderRadius: BorderRadius.circular(20)),
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => HomePage()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+                    return HomePage();
+                  }));
                 },
                 child: Text(
                   'Login',
