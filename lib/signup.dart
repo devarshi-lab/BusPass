@@ -35,7 +35,22 @@ class _SignUpState extends State<SignUp> {
           child: Center(
             child: Form(
               key: _key,
-              autovalidate: true,
+              autovalidate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  : true,
               child: Column(
                 children: [
                   Container(
@@ -59,17 +74,17 @@ class _SignUpState extends State<SignUp> {
                         keyboardType: TextInputType.number,
                         maxLength: 12,
                         validator: (value){
-                            if (value == null || value!.trim() == "")
+                            if (value == null || value.trim() == "")
                             {
                               _adharErr = "Please Enter Adhar Number";
                             }
-                            else 
+                            else
                             {
                                 if (value.length < 12 || value.length > 12)
                                 {
                                     return _adharErr;
                                 }
-                            } 
+                            }
                             return null;
 
                         },
@@ -86,17 +101,19 @@ class _SignUpState extends State<SignUp> {
                     ),
                     onPressed: () {
                         _onSubmit();
-                      });
-                    },
-                    
-                  ),
-                ),
-                ],),
-            ),
-            ),
-        ),
-      ) 
-      );
+                      }
+                      )
+                    )]))))));
+      //               },
+      //
+      //             ),
+      //           ),
+      //           ],),
+      //       ),
+      //       ),
+      //   ),
+      // )
+      // );
     
   }
 }
